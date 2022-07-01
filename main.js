@@ -24,11 +24,11 @@ const app = Vue.createApp({
         },
         invert(){
             if (this.inventory > 1){
-                this.inventory -= 90
+                this.inventory = 0
             }
         },
         back(){
-            this.inventory +=100
+            this.inventory = 100
         }
     } 
 })
