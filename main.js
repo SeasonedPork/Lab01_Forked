@@ -9,12 +9,26 @@ const app = Vue.createApp({
             inventory: 100,
             details: ['50% cotton','30% wool','20% polyster'],
             variants: [
-                { id: 2234, color: 'green' , size:'  S  ' },
-                { id: 2235, color: 'blue', size:'  M  '},
-                { id: 69, color: 'null', size:' L '}
+                { id: 2234, color: 'green' , size:'  S  ' , image: './asset/images/socks_green.jpg'},
+                { id: 2235, color: 'blue', size:'  M  ' , image: './asset/images/socks_blue.jpg'},
+                { id: 69, color: 'null', size:' L ' , image: './asset/images/socks_green.jpg'}
             ],
             cart: 0,
-            onSale: false
+            onSale: true
         }
-    }
+        
+    },
+    methods: {
+        addToCart() {
+            this.cart +=1
+        },
+        invert(){
+            if (this.inventory > 1){
+                this.inventory -= 90
+            }
+        },
+        back(){
+            this.inventory +=100
+        }
+    } 
 })
