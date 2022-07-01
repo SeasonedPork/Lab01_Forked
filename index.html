@@ -21,7 +21,7 @@
                 <h1 > <a :href="link">{{product}}</a></h1>
                 <p v-if="inventory > 10">In Stock</p>
                 <p v-else-if="inventory = 10 && > 0"> In Stock </p>
-                <p v-if="onSALE">OnSale!!!</p>
+                <p v-if="onSALE == true">OnSale!!!</p>
                 <p v-else>Out of Stock</p>
             </div>
         </div>
